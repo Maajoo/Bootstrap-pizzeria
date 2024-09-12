@@ -1,0 +1,102 @@
+.fixed-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.padding {
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 3%;
+}
+
+.carouselborder {
+    border-radius: 10;
+}
+
+.heading {
+    font-size: calc(2em + 2vw);
+    font-weight: 700;
+    margin-top: 8%;
+    margin-bottom: 5%;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.cardheading {
+    font-size: calc(1em + 1vw);
+    font-weight: 600;
+    color: rgb(30, 30, 30);
+}
+
+.cardtext {
+    font-size: calc(0.7em + 0.7vw);
+    color: rgb(30, 30, 30);
+}
+
+.subheading {
+    font-size: calc(1.2em + 1.2vw);
+    font-weight: 600;
+    color: whitesmoke;
+}
+
+.text {
+    font-size: calc(1em + 1vw);
+}
+
+.buttontext {
+    font-size: calc(1.2em + 1.2vw);
+    font-weight: 600;
+    color: whitesmoke
+}
+
+
+.accordion {
+    --bs-accordion-color: whitesmoke;
+    --bs-accordion-active-color: rgb(30, 30, 30);
+    --bs-accordion-active-bg: whitesmoke;
+}
+
+.btn {
+    background-color: rgb(33, 37, 41);
+    border: 1px solid rgb(33, 37, 41);
+}
+
+.btn:hover {
+    background-color: rgb(53, 60, 66);
+    border: 1px solid rgb(53, 60, 66);
+}
+
+.btn-primary {
+    --bs-btn-active-bg: rgb(71, 80, 88);
+    --bs-btn-active-border-color: rgb(71, 80, 88);
+}
+
+.navcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navmargin {
+    padding: 5%;
+}
+
+.footer-text {
+    color: whitesmoke;
+    text-align: center;
+    font-size: calc(0.4em + 0.4vw);
+    margin: 1%;
+}
+
+.footer-container {
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(18, 20, 22);
+}

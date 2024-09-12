@@ -1,13 +1,307 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
+    <title>Bootstrap Example</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
+
+    <!-- Bootstrap stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="./styles.css">
+
+    <!-- Bootstrap v5.3.3 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#spy" class="bg-dark">
+
+    <!-- Navigation -->
+    <div class="padding">
+        <nav class="navbar sticky-top navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+            <div class="container-fluid">
+                <div class="navcontainer">
+
+                    <!-- Logo -->
+                    <a class="navbar-brand" href="#">
+                        <img src="./pictures/logo.jpg" class="d-inline-block align-text-top rounded-4"
+                            style="min-width: 56px; width: 8%;" alt="...">
+                    </a>
+
+                    <!-- Hamburger menu -->
+                    <button class="navbar-toggler ms-auto" style="height: fit-content;" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0 ms-auto justify-content-center">
+
+                        <!-- Nav scrollspy 1 -->
+                        <li class="nav-item mx-lg-3">
+                            <a class="nav-link btn btn-primary buttontext" href="#scrollspyHeading1">Tarjoukset</a>
+                        </li>
+
+                        <!-- Nav scrollspy 2 -->
+                        <li class="nav-item mx-lg-3">
+                            <a class="nav-link btn btn-primary buttontext" href="#scrollspyHeading2">Menu</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
+            data-bs-smooth-scroll="true" class="scrollspy-example p-3 rounded-4" tabindex="0">
+
+            <!-- Autoplaying Carousel -->
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner rounded-4">
+                    <div class="carousel-item active">
+                        <img src="./pictures/slide1.jpg" class="d-block w-100 rounded-4" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./pictures/slide2.jpg" class="d-block w-100 rounded-4" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./pictures/slide3.jpg" class="d-block w-100 rounded-4" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+
+            <!-- Scrollspy "Tarjoukset" -->
+            <h4 id="scrollspyHeading1" class="heading">Tarjoukset</h4>
+
+            <!-- Grid & Cards -->
+            <div class="container text-center">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                    <!-- Card 1 -->
+                    <div class="col">
+                        <div class="card" style="width: 100%;">
+                            <img src="./pictures/tarjous1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title cardheading">Pepperoni pizza -15%</h5>
+                                <p class="card-text cardtext">Täydellinen yhdistelmä mehukasta pepperonia ja juustoa.
+                                    Nyt vain
+                                    10,20€</p>
+                                <a href="./order.html" class="btn btn-primary buttontext">Tilaa</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col">
+                        <div class="card" style="width: 100%;">
+                            <img src="./pictures/tarjous2.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title cardheading">Sienipizza -15%</h5>
+                                <p class="card-text cardtext">Samettiset sienet ja herkullinen juusto tekevät tästä
+                                    pizzasta
+                                    vastustamattoman. Nyt vain 10,20€</p>
+                                <a href="./order.html" class="btn btn-primary buttontext">Tilaa</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col">
+                        <div class="card" style="width: 100%;">
+                            <img src="./pictures/tarjous3.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title cardheading">Kasvispizza -20%</h5>
+                                <p class="card-text cardtext">Raikas ja runsas täytteinen kasvispizza täynnä makua. Nyt
+                                    vain
+                                    9,60€</p>
+                                <a href="./order.html" class="btn btn-primary buttontext">Tilaa</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <!-- Scrollspy "Menu" -->
+            <h4 id="scrollspyHeading2" class="heading"></h4>
+
+            <!-- Accordion -->
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+
+                <!-- Accordion section "Hinnat" -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button cardheading" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne">
+                            Hinnat
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+
+                            <!-- Table -->
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="cardheading">Tuote</th>
+                                            <th scope="col" class="cardheading">Kuvaus</th>
+                                            <th scope="col" class="cardheading">Hinta</th>
+                                            <th scope="col" class="cardheading"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Subheading "Pääruoat" -->
+                                        <tr class="table-active">
+                                            <th colspan="4" class="cardheading">Pääruoat</th>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row" class="text">Pizza 1</th>
+                                            <td class="text">Maukkaat pizzat suoraan uunista pöytääsi!</td>
+                                            <td class="text">11,99€</td>
+                                            <td><a href="./order.html" class="btn btn-primary buttontext">Tilaa</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="text">Pizza 2</th>
+                                            <td class="text">Maukkaat pizzat suoraan uunista pöytääsi!</td>
+                                            <td class="text">11,99€</td>
+                                            <td><a href="./order.html" class="btn btn-primary buttontext">Tilaa</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="text">Pizza 3</th>
+                                            <td class="text">Maukkaat pizzat suoraan uunista pöytääsi!</td>
+                                            <td class="text">11,99€</td>
+                                            <td><a href="./order.html" class="btn btn-primary buttontext">Tilaa</a></td>
+                                        </tr>
+
+                                        <!-- Subheading "Lisukkeet" -->
+                                        <tr class="table-active">
+                                            <th colspan="4" class="subheading">Lisukkeet</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="text">Ranskalaiset</th>
+                                            <td class="text">Täydelliset ranskalaisemme ovat rapeita sekä herkullisia!
+                                            </td>
+                                            <td class="text">3,99€</td>
+                                            <td><a href="./order.html" class="btn btn-primary buttontext">Tilaa</a></td>
+                                        </tr>
+
+                                        <!-- Subheading "Juomat" -->
+                                        <tr class="table-active">
+                                            <th colspan="4" class="subheading">Juomat</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="text">Hanajuoma</th>
+                                            <td class="text">Raikas hanajuoma joka sammuttaa janon varmasti!</td>
+                                            <td class="text">1,99€</td>
+                                            <td><a href="./order.html" class="btn btn-primary buttontext">Tilaa</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion section "Tarina" -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button cardheading collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            Tarina
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+
+                            <p class="cardtext">
+                                Kaikki alkoi eräänä iltana, kun kolme intohimoista pizzan ystävää istuivat saman pöydän
+                                ääressä keskustellen täydellisen pizzan salaisuudesta. Olimme matkustaneet ympäri
+                                maailmaa, maistelleet erilaisia makuja ja tutustuneet moniin erilaisiin
+                                pizzaperinteisiin. Jossain vaiheessa iltaa syntyi ajatus: miksi emme loisi omaa
+                                pizzeriaa, jossa yhdistyvät aidot italialaiset maut ja tuoreimmat paikalliset
+                                raaka-aineet?
+
+                                Tästä ideasta syntyi "Pepperoni". Halusimme tehdä jotain enemmän kuin vain myydä
+                                pizzaa. Tavoitteenamme oli tarjota paikka, jossa jokainen annos on huolella valmistettu
+                                rakkaudesta ruokaan ja asiakkaisiimme. Käytämme vain parhaita ainesosia – käsin
+                                leivottua taikinaa, tuoretta tomaattikastiketta, italialaista mozzarella-juustoa ja
+                                kotimaisia, sesongin mukaisia täytteitä. Kaikki annoksemme valmistetaan kiviuunissa,
+                                jotta pizzamme saavat sen aidon ja perinteisen rapean pohjan, joka vie makunautinnon
+                                uudelle tasolle.
+
+                                Meille "Pepperoni" on enemmän kuin vain ravintola. Se on yhteisömme
+                                kohtaamispaikka, jossa ystävät ja perheet voivat kokoontua, jakaa hetkiä ja nauttia
+                                hyvästä ruuasta. Jokainen pizza kertoo tarinaa, ja toivomme, että jokainen suupala tuo
+                                sinut hieman lähemmäksi alkuperäistä unelmaamme.
+
+                                Tule ja koe itse, miten intohimomme muuntuu pizzaksi – olet aina tervetullut meidän
+                                pöytäämme!
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion section "Kuvia" -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button cardheading collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            Kuvia
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+
+                            <div class="row row-cols-1 row-cols-md-3 g-4">
+                                <div class="col-sm"> <img src="./pictures/accordion-picture1.jpg"
+                                        class="d-block w-100 rounded-4" alt="..." /></div>
+                                <div class="col-sm"> <img src="./pictures/accordion-picture2.jpg"
+                                        class="d-block w-100 rounded-4" alt="..." /></div>
+                                <div class="col-sm"> <img src="./pictures/accordion-picture3.jpg"
+                                        class="d-block w-100 rounded-4" alt="..." /></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <div class="footer-container">
+        <p class="footer-text">© 2024 Copyright: Pepperoni pizzeria</p>
+        <p class="footer-text">Email: <a href="mailto:hege@example.com">pepperoni.pizzeria@example.com</a></p>
+        <p class="footer-text">Mobile: +358 50 123 1234</p>
+    </div>
+</footer>
+
 </html>
